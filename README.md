@@ -40,18 +40,18 @@ https://github.com/othneildrew/Best-README-Template -->
   An ethereum smart contract to facilitate a decentralized lottery system with support for lottery creation, voluntary (one-time) participation, maintaining participation history and random (and fair) winner selection
 
   #### Rules of the system
-  1. A user creates a lottery instance (and partipates with his/her contribution), also associating a result-eligibility timestamp
-  2. Other users can participate in the (already created) lottery (at most once) with their own contribution
-  3. Once the result-eligibility-timestamp is reached/exceeded, no new participations are allowed
+  1. A user creates a lottery instance (and participates with his/her contribution), also associating a result-eligibility timestamp
+  2. Other users can participate in the (already created) lottery (at most once per lottery) with their own contribution
+  3. Once the result-eligibility-timestamp is reached/exceeded, no new participations are allowed & the winner can be declared
   4. Winner declaration (can be triggered by anyone)
      - Randomly selected (at most once per lottery)
-     - WinningAmount = MIN(lottery.value, 2 * winner.contribution)
+     - WinningAmount = MIN(2 * winner.contribution, lottery.value)
      - LotteryServiceOwnerProfit = lottery.value - WinningAmount
 
   #### Service Ownership rules
-  1. Contract-creator/deployer will be the initial-owner 
+  1. Contract creator/deployer will be the initial-owner 
   2. Change in ownership is allowed (only by the current owner)
-  3. Service-Profits must be withdrawable/spendable only by the current owner
+  3. Service-Profits must be spendable only by the current owner
 
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -115,5 +115,6 @@ https://github.com/othneildrew/Best-README-Template -->
   * [Open Source Stack, Openzeppelin](https://www.openzeppelin.com/open-source-stack)
   * [Remix Resources](https://remix-project.org/?lang=en)
   * [github.com/othneildrew/Best-README-Template/](https://github.com/othneildrew/Best-README-Template)
-  * [Digital Smart Contract Wallpaper, Wallpapers.com](https://wallpapers.com/wallpapers/digital-smart-contract-kkctld1rqfd0gikw.html)
+  * [Banner Template, Smart Contract, Adobe Stock](https://stock.adobe.com/search/images?k=smart+contract&asset_id=509043142)
+
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
