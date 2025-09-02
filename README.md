@@ -6,7 +6,7 @@ https://github.com/othneildrew/Best-README-Template -->
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h1><i>Decentralized Lotter Service</i></h1>
+  <h1><i>Decentralized Lottery Service</i></h1>
 
 
   
