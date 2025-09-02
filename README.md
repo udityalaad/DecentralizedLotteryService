@@ -40,18 +40,18 @@ https://github.com/othneildrew/Best-README-Template -->
   An ethereum smart contract to facilitate a decentralized lottery system with support for lottery creations, voluntary (one-time) participation, maintaining participation history and random (and fair) winner selection
 
   #### Rules of the system
-	1. A user creates a lottery instance (and partipates with his/her contribution), also associating a result-eligibility timestamp/deadline
-	2. Other user(s) can participate in the (alread created) lottery (at most once) with their own contribution
-	3. Once the result-eligibility-timestamp is reached/exceeded, no new participations are allowed
-	4. Winner declaration: (can be triggered by anyone)
-		- Randomly selected (at most once)
-		- Winner_Amount = MIN(lottery.value, 2 * winner.contribution)
-		- LotteryServiceOwner-profit = lottery.value - Winner_Amount
+  1. A user creates a lottery instance (and partipates with his/her contribution), also associating a result-eligibility timestamp/deadline
+  2. Other user(s) can participate in the (alread created) lottery (at most once) with their own contribution
+  3. Once the result-eligibility-timestamp is reached/exceeded, no new participations are allowed
+  4. Winner declaration: (can be triggered by anyone)
+	- Randomly selected (at most once)
+	- Winner_Amount = MIN(lottery.value, 2 * winner.contribution)
+	- LotteryServiceOwner-profit = lottery.value - Winner_Amount
 
   #### Service Ownership rules
-	1. Initial-owner will be the Contract-creator/deployer
-	2. Change in ownership must be allowed (only by the current owner)
-	3. Service-Profits must be withdrawable/spendable only by the current owner
+  1. Initial-owner will be the Contract-creator/deployer
+  2. Change in ownership must be allowed (only by the current owner)
+  3. Service-Profits must be withdrawable/spendable only by the current owner
 
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
