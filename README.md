@@ -6,7 +6,7 @@ https://github.com/othneildrew/Best-README-Template -->
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h1><i>Decentralized Child Safe Deposit</i></h1>
+  <h1><i>Decentralized Lotter Service</i></h1>
 
 
   
@@ -14,7 +14,7 @@ https://github.com/othneildrew/Best-README-Template -->
   .
 
   <p align="center">
-    An ethereum smart contract to facilitate a decentralized safe-deposit !
+    An ethereum smart contract to facilitate a decentralized lottery system with support for lottery creation, voluntary participation and random winner selection !
   </p>
 </div>
  
@@ -37,17 +37,22 @@ https://github.com/othneildrew/Best-README-Template -->
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-  An ethereum smart contract to facilitate a decentralized safe-deposit with support for lock-in, delayed availability, emergency withdrawal, observer actions & enhanced security
+  An ethereum smart contract to facilitate a decentralized lottery system with support for lottery creations, voluntary (one-time) participation, maintaining participation history and random (and fair) winner selection
 
   #### Rules of the system
-  1. Parent(s) make periodic fund deposits
-  2. Child can withdraw funds after a specified (future) eligibility timestamp
-      - *Else* - Parent(s) can withdraw funds (atleast 1 year post child's eligibility)
-      - *Else* - Observer(s) can withdraw funds (atleast 2 year post parents' eligibility)
-  3. Emergency Withdrawals (with daily limits)
-      - *Child* - Before eligibility, can withdraw upto the maximum daily limit (set by the observers)
-      - *Parent(s)* - Before eligibility, can withdraw upto the maximum daily limit (set by child/observers)
-      - *Observer(s)* - Not allowed
+	1. A user creates a lottery instance (and partipates with his/her contribution), also associating a result-eligibility timestamp/deadline
+	2. Other user(s) can participate in the (alread created) lottery (at most once) with their own contribution
+	3. Once the result-eligibility-timestamp is reached/exceeded, no new participations are allowed
+	4. Winner declaration: (can be triggered by anyone)
+		- Randomly selected (at most once)
+		- Winner_Amount = MIN(lottery.value, 2 * winner.contribution)
+		- LotteryServiceOwner-profit = lottery.value - Winner_Amount
+
+  #### Service Ownership rules
+	1. Initial-owner will be the Contract-creator/deployer
+	2. Change in ownership must be allowed (only by the current owner)
+	3. Service-Profits must be withdrawable/spendable only by the current owner
+
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
